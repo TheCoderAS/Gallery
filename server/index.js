@@ -15,7 +15,7 @@ app.use(cors());
 app.use('/posts', postRoutes);
 app.use('/', (req,res)=>res.send("Hello to Gallery API"));
 
-const CONNECTION_URL = 'mongodb+srv://AalokS:Tonealok@25@gallery.s86b2.mongodb.net/Gallery?retryWrites=true&w=majority';
+const CONNECTION_URL = 'mongodb+srv://<username>:<password>@gallery.s86b2.mongodb.net/<dbname>?retryWrites=true&w=majority';
 const PORT = process.env.PORT|| 5001;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
